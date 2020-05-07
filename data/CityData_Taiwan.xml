@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travel>
+
+	<city lang="EN" country= "Taiwan" area="North" subarea="" prefecture="Taipei　City" />
+	<city lang="JP" country= "台湾" area="北部" subarea="" prefecture="台北市" />
+	<city lang="CHT" country= "臺灣" area="北部" subarea="" prefecture="臺北市" />
+
+	<city lang="EN" country= "Taiwan" area="North" subarea="" prefecture="New Taipei City" />
+	<city lang="JP" country= "台湾" area="北部" subarea="" prefecture="新北市" />
+	<city lang="CHT" country= "臺灣" area="北部" subarea="" prefecture="新北市" />
+
+	<city lang="EN" country= "Taiwan" area="North" subarea="" prefecture="Keelung　City" />
+	<city lang="JP" country= "台湾" area="北部" subarea="" prefecture="基隆市" />
+	<city lang="CHT" country= "臺灣" area="北部" subarea="" prefecture="基隆市" />
+
+	<city lang="EN" country= "Taiwan" area="North" subarea="" prefecture="Yilan　County" />
+	<city lang="JP" country= "台湾" area="北部" subarea="" prefecture="宜蘭県" />
+	<city lang="CHT" country= "臺灣" area="北部" subarea="" prefecture="宜蘭縣" />
+
+	<city lang="EN" country= "Taiwan" area="North" subarea="" prefecture="Taoyuan　County" />
+	<city lang="JP" country= "台湾" area="北部" subarea="" prefecture="桃園県" />
+	<city lang="CHT" country= "臺灣" area="北部" subarea="" prefecture="桃園縣" />
+
+	<city lang="EN" country= "Taiwan" area="North" subarea="" prefecture="Hsinchu　County" />
+	<city lang="JP" country= "台湾" area="北部" subarea="" prefecture="新竹県" />
+	<city lang="CHT" country= "臺灣" area="北部" subarea="" prefecture="新竹縣" />
+
+	<city lang="EN" country= "Taiwan" area="North" subarea="" prefecture="Hsinchu　City" />
+	<city lang="JP" country= "台湾" area="北部" subarea="" prefecture="新竹市" />
+	<city lang="CHT" country= "臺灣" area="北部" subarea="" prefecture="新竹市" />
+
+
+
+	<city lang="EN" country= "Taiwan" area="Central" subarea="" prefecture="Miaoli County" />
+	<city lang="JP" country= "台湾" area="中部" subarea="" prefecture="苗栗県" />
+	<city lang="CHT" country= "臺灣" area="中部" subarea="" prefecture="苗栗縣" />
+
+	<city lang="EN" country= "Taiwan" area="Central" subarea="" prefecture="Taichung City" />
+	<city lang="JP" country= "台湾" area="中部" subarea="" prefecture="台中市" />
+	<city lang="CHT" country= "臺灣" area="中部" subarea="" prefecture="臺中市" />
+
+	<city lang="EN" country= "Taiwan" area="Central" subarea="" prefecture="Changhua County" />
+	<city lang="JP" country= "台湾" area="中部" subarea="" prefecture="彰化県" />
+	<city lang="CHT" country= "臺灣" area="中部" subarea="" prefecture="彰化縣" />
+
+	<city lang="EN" country= "Taiwan" area="Central" subarea="" prefecture="Nantou County" />
+	<city lang="JP" country= "台湾" area="中部" subarea="" prefecture="南投県" />
+	<city lang="CHT" country= "臺灣" area="中部" subarea="" prefecture="南投縣" />
+
+	<city lang="EN" country= "Taiwan" area="Central" subarea="" prefecture="Yunlin County" />
+	<city lang="JP" country= "台湾" area="中部" subarea="" prefecture="雲林県" />
+	<city lang="CHT" country= "臺灣" area="中部" subarea="" prefecture="雲林縣" />
+
+
+
+	<city lang="EN" country= "Taiwan" area="South" subarea="" prefecture="Chiayi County" />
+	<city lang="JP" country= "台湾" area="南部" subarea="" prefecture="嘉義県" />
+	<city lang="CHT" country= "臺灣" area="南部" subarea="" prefecture="嘉義縣" />
+
+	<city lang="EN" country= "Taiwan" area="South" subarea="" prefecture="Chiayi City" />
+	<city lang="JP" country= "台湾" area="南部" subarea="" prefecture="嘉義市" />
+	<city lang="CHT" country= "臺灣" area="南部" subarea="" prefecture="嘉義市" />
+
+	<city lang="EN" country= "Taiwan" area="South" subarea="" prefecture="Tainan City" />
+	<city lang="JP" country= "台湾" area="南部" subarea="" prefecture="台南市" />
+	<city lang="CHT" country= "臺灣" area="南部" subarea="" prefecture="臺南市" />
+
+	<city lang="EN" country= "Taiwan" area="Central" subarea="" prefecture="Kaohsiung City" />
+	<city lang="JP" country= "台湾" area="南部" subarea="" prefecture="高雄市" />
+	<city lang="CHT" country= "臺灣" area="南部" subarea="" prefecture="高雄市" />
+
+	<city lang="EN" country= "Taiwan" area="Central" subarea="" prefecture="Pingtung County" />
+	<city lang="JP" country= "台湾" area="南部" subarea="" prefecture="屏東県" />
+	<city lang="CHT" country= "臺灣" area="南部" subarea="" prefecture="屏東縣" />
+
+	<city lang="EN" country= "Taiwan" area="Central" subarea="" prefecture="Penghu County" />
+	<city lang="JP" country= "台湾" area="南部" subarea="" prefecture="澎湖県" />
+	<city lang="CHT" country= "臺灣" area="南部" subarea="" prefecture="澎湖縣" />
+
+
+
+	<city lang="EN" country= "Taiwan" area="East" subarea="" prefecture="Hualien County" />
+	<city lang="JP" country= "台湾" area="東部" subarea="" prefecture="花蓮県" />
+	<city lang="CHT" country= "臺灣" area="東部" subarea="" prefecture="花蓮縣" />
+
+	<city lang="EN" country= "Taiwan" area="East" subarea="" prefecture="Taitung County" />
+	<city lang="JP" country= "台湾" area="東部" subarea="" prefecture="台東県" />
+	<city lang="CHT" country= "臺灣" area="東部" subarea="" prefecture="臺東縣" />
+
+</travel>

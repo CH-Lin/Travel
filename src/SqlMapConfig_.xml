@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<typeAliases>
+		<typeAlias alias="Spot" type="com.travel.data.Spot" />
+		<typeAlias alias="SpotDetail" type="com.travel.data.SpotDetail" />
+		<typeAlias alias="Price" type="com.travel.data.Price" />
+		<typeAlias alias="PriceSpecial" type="com.travel.data.PriceSpecial" />
+		<typeAlias alias="TimeOpenClose" type="com.travel.data.TimeOpenClose" />
+		<typeAlias alias="SpecialEvent" type="com.travel.data.SpecialEvent" />
+		<typeAlias alias="SpecialClosed" type="com.travel.data.SpecialClosed" />
+		<typeAlias alias="SpotTimeTable" type="com.travel.data.SpotTimeTable" />
+		<typeAlias alias="Comment" type="com.travel.data.Comment" />
+		<typeAlias alias="Type" type="com.travel.data.Type" />
+		<typeAlias alias="Access" type="com.travel.data.Access" />
+		<typeAlias alias="Pass" type="com.travel.data.Pass" />
+		<typeAlias alias="Next" type="com.travel.data.Next" />
+		<typeAlias alias="Picture" type="com.travel.data.Picture" />
+		<typeAlias alias="Country" type="com.travel.data.Country" />
+		<typeAlias alias="City" type="com.travel.data.City" />
+		<typeAlias alias="GeoData" type="com.travel.data.GeoData" />
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="org.postgresql.Driver" />
+				<property name="url" value="jdbc:postgresql://ec2-54-197-250-52.compute-1.amazonaws.com:5432/d42sfmdhpr0i59" />
+				<property name="username" value="ebsfycwwqplepq" />
+				<property name="password" value="Fs65GI6mHnzw4MJ5WcDzPtW6Hx" />
+				<property name="driver.ssl" value="true" />
+				<property name="driver.sslfactory" value="org.postgresql.ssl.NonValidatingFactory" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="com/travel/db/SpotMapper.xml" />
+		<mapper resource="com/travel/db/Table_ps.xml" />
+	</mappers>
+
+</configuration>

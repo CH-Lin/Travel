@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SpotMapper">
+	<resultMap id="counter" type="Counter">
+		<result property="id" column="ID" />
+		<result property="gpsOffset" column="GPSOFFSET" />
+		<result property="gpsCount" column="GPSCOUNT" />
+		<result property="gpsTime" column="GPSTIME" />
+		<result property="accessDayCount" column="ACCESSDAYCOUNT" />
+		<result property="accessDayTime" column="ACCESSDAYTIME" />
+		<result property="accessSecCount" column="ACCESSSECCOUNT" />
+		<result property="accessSecTime" column="ACCESSSECTIME" />
+	</resultMap>
+
+	<resultMap id="country" type="Country">
+		<result property="id" column="ID" />
+		<result property="language" column="LANGUAGE" />
+		<result property="country" column="COUNTRY" />
+	</resultMap>
+
+	<resultMap id="city" type="City">
+		<result property="id" column="ID" />
+		<result property="language" column="LANGUAGE" />
+		<result property="country" column="COUNTRY" />
+		<result property="area" column="AREA" />
+		<result property="subarea" column="SUBAREA" />
+		<result property="prefecture" column="PREFECTURE" />
+	</resultMap>
+
+	<resultMap id="spot" type="Spot">
+		<result property="spotId" column="SPOTID" />
+		<result property="name" column="NAME" />
+		<result property="country" column="COUNTRY" />
+		<result property="address" column="ADDRESS" />
+		<result property="type" column="TYPE" />
+		<result property="checked" column="CHECKED" />
+		<result property="source" column="SOURCE" />
+	</resultMap>
+
+	<resultMap id="spotdetail" type="SpotDetail">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="address2" column="ADDRESS2" />
+		<result property="place" column="PLACE" />
+		<result property="info" column="INFO" />
+		<result property="tel" column="TEL" />
+		<result property="parking" column="PARKING" />
+		<result property="url" column="URL" />
+	</resultMap>
+
+	<resultMap id="picture" type="Picture">
+		<result property="id" column="ID" />
+		<result property="userId" column="USERID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="fileName" column="FILENAME" />
+		<result property="sizeX" column="SIZEX" />
+		<result property="sizeY" column="SIZEY" />
+		<result property="message" column="MESSAGE" />
+	</resultMap>
+
+	<resultMap id="price" type="Price">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="price" column="PRICE" />
+		<result property="ageFrom" column="AGEFROM" />
+		<result property="ageTo" column="AGETO" />
+		<result property="numberOfPerson" column="NUMBEROFPERSON" />
+		<result property="spCond" column="SPCOND" />
+		<result property="message" column="MESSAGE" />
+	</resultMap>
+
+	<resultMap id="pricespecail" type="PriceSpecial">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="price" column="PRICE" />
+		<result property="ageFrom" column="AGEFROM" />
+		<result property="ageTo" column="AGETO" />
+		<result property="numberOfPerson" column="NUMBEROFPERSON" />
+		<result property="timeStart" column="TIMESTART" />
+		<result property="timeEnd" column="TIMEEND" />
+		<result property="dateStart" column="DATESTART" />
+		<result property="dateEnd" column="DATEEND" />
+		<result property="spCond" column="SPCOND" />
+		<result property="message" column="MESSAGE" />
+	</resultMap>
+
+	<resultMap id="timeopenclose" type="TimeOpenClose">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="timeStart" column="TIMESTART" />
+		<result property="timeEnd" column="TIMEEND" />
+		<result property="dayStart" column="DAYSTART" />
+		<result property="dayEnd" column="DAYEND" />
+		<result property="monthStart" column="MONTHSTART" />
+		<result property="monthEnd" column="MONTHEND" />
+		<result property="week" column="WEEK" />
+		<result property="message" column="MESSAGE" />
+	</resultMap>
+
+	<resultMap id="specialevent" type="SpecialEvent">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="repeat" column="REPEAT" />
+		<result property="repeatType" column="REPEATTYPE" />
+		<result property="timeStart" column="TIMESTART" />
+		<result property="timeEnd" column="TIMEEND" />
+		<result property="dateStart" column="DATESTART" />
+		<result property="dateEnd" column="DATEEND" />
+		<result property="message" column="MESSAGE" />
+	</resultMap>
+
+	<resultMap id="specialclosed" type="SpecialClosed">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="repeat" column="REPEAT" />
+		<result property="repeatType" column="REPEATTYPE" />
+		<result property="timeStart" column="TIMESTART" />
+		<result property="timeEnd" column="TIMEEND" />
+		<result property="dateStart" column="DATESTART" />
+		<result property="dateEnd" column="DATEEND" />
+		<result property="message" column="MESSAGE" />
+	</resultMap>
+
+	<resultMap id="spottimetable" type="SpotTimeTable">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="yearMonth" column="YEARMONTH" />
+		<result property="data" column="DATA" />
+	</resultMap>
+
+	<resultMap id="access" type="Access">
+		<result property="id" column="ID" />
+		<result property="fromId" column="FROMID" />
+		<result property="toId" column="TOID" />
+		<result property="transportType" column="TRANSPORTTYPE" />
+		<result property="duration" column="DURATION" />
+		<result property="distance" column="DISTANCE" />
+		<result property="result" column="RESULT" />
+	</resultMap>
+
+	<resultMap id="accessinfo" type="AccessInfo">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="fromId" column="FROMID" />
+		<result property="transportType" column="TRANSPORTTYPE" />
+		<result property="timeDeparture" column="TIMEDEPARTURE" />
+		<result property="timeNecessary" column="TIMENECESSARY" />
+		<result property="information" column="INFORMATION" />
+	</resultMap>
+
+	<resultMap id="comment" type="Comment">
+		<result property="id" column="ID" />
+		<result property="userId" column="USERID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="ranking" column="RANKING" />
+		<result property="postTime" column="POSTTIME" />
+		<result property="timeNecessary" column="TIMENECESSARY" />
+		<result property="message" column="MESSAGE" />
+	</resultMap>
+
+	<resultMap id="spottype" type="SpotType">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="type" column="TYPE" />
+	</resultMap>
+
+	<resultMap id="next" type="Next">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="userId" column="USERID" />
+		<result property="next" column="PREFEREDNEXT" />
+	</resultMap>
+
+	<resultMap id="pass" type="Pass">
+		<result property="id" column="ID" />
+		<result property="spotId" column="SPOTID" />
+		<result property="name" column="PASSNAME" />
+	</resultMap>
+
+	<resultMap id="geodata" type="GeoData">
+		<result property="address" column="ADDRESS" />
+		<result property="latitude" column="LATITUDE" />
+		<result property="longitude" column="LONGITUDE" />
+		<result property="result" column="RESULT" />
+	</resultMap>
+</mapper>

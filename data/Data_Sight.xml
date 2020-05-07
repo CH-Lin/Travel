@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travel>
+
+	<sight>
+        <data lang="CHT" name="国立新美術館" country="日本" address="東京都港区六本木7-22-2" address2="" source="http://www.rurubu.com/sight/detail.aspx?BookID=32520010"
+            place="" info="" tel="03-5777-8600" parking="FALSE" url="" latitude="-1.0" longitude="-1.0" area="東京" subarea="港区"/>
+        <type type="1" message="" />
+		<businessHours timeStart="10:00:00" timeEnd="18:00:00" dayStart="0" dayEnd="1" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="入館は～17時30分">
+            <description lang="CHT" description="入館は～17時30分" />
+		</businessHours>
+		<businessHours timeStart="10:00:00" timeEnd="18:00:00" dayStart="3" dayEnd="4" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="入館は～17時30分">
+            <description lang="CHT" description="入館は～17時30分" />
+		</businessHours>
+		<businessHours timeStart="10:00:00" timeEnd="20:00:00" dayStart="5" dayEnd="5" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="入館は～19時30分">
+            <description lang="CHT" description="入館は～19時30分" />
+		</businessHours>
+		<businessHours timeStart="10:00:00" timeEnd="18:00:00" dayStart="6" dayEnd="6" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="入館は～17時30分">
+            <description lang="CHT" description="入館は～17時30分" />
+		</businessHours>
+		<closed timeStart="00:00:00" timeEnd="23:59:59" dayStart="2" dayEnd="2" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="火曜(祝日の場合は翌日)">
+            <description lang="CHT" description="火曜(祝日の場合は翌日)" />
+		</closed>
+		<price price="0" ageFrom="1" ageTo="99" numberOfPerson="1" message="">
+            <description lang="CHT" description="" />
+		</price>
+		<pricespecail price="0" ageFrom="1" ageTo="99" numberOfPerson="1" timeStart="09:00:00" timeEnd="17:00:00" dateStart="2014-06-17" dateEnd="2014-06-30" message="">
+            <description lang="CHT" description="" />
+		</pricespecail>
+	</sight>
+
+	<sight>
+        <data lang="CHT" name="東京都庁展望室 北展望室" country="日本" address="東京都新宿区西新宿2-8-1" address2="東京都庁第一本庁舎" source="http://www.rurubu.com/sight/detail.aspx?BookID=A1403100"
+            place="" info="" tel="03-5320-7890" parking="TRUE" url="" latitude="-1.0" longitude="-1.0" area="東京" subarea="新宿区"/>
+        <type type="4" message="" />
+		<businessHours timeStart="09:30:00" timeEnd="22:30:00" dayStart="0" dayEnd="6" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="北展望室">
+            <description lang="CHT" description="北展望室" />
+		</businessHours>
+		<closed timeStart="00:00:00" timeEnd="23:59:59" dayStart="1" dayEnd="1" monthStart="0" monthEnd="11" week="2,4" message="北展望室">
+            <description lang="CHT" description="北展望室" />
+		</closed>
+		<price price="0" ageFrom="1" ageTo="99" numberOfPerson="1" message="見学無料">
+            <description lang="CHT" description="見学無料" />
+		</price>
+	</sight>
+
+	<sight>
+        <data lang="CHT" name="東京都庁展望室 南展望室" country="日本" address="東京都新宿区西新宿2-8-1" address2="東京都庁第一本庁舎" source="http://www.rurubu.com/sight/detail.aspx?BookID=A1403100"
+            place="" info="" tel="03-5320-7890" parking="TRUE" url="" latitude="-1.0" longitude="-1.0" area="東京" subarea="新宿区"/>
+        <type type="4" message="" />
+		<businessHours timeStart="09:30:00" timeEnd="17:00:00" dayStart="0" dayEnd="6" monthStart="0" monthEnd="11" week="1,3,5,6" message="南展望室">
+            <description lang="CHT" description="南展望室" />
+		</businessHours>
+		<businessHours timeStart="09:30:00" timeEnd="17:00:00" dayStart="0" dayEnd="0" monthStart="0" monthEnd="11" week="2,4" message="南展望室">
+            <description lang="CHT" description="南展望室" />
+		</businessHours>
+		<businessHours timeStart="09:30:00" timeEnd="22:30:00" dayStart="1" dayEnd="1" monthStart="0" monthEnd="11" week="2,4" message="南展望室">
+            <description lang="CHT" description="南展望室" />
+		</businessHours>
+		<businessHours timeStart="09:30:00" timeEnd="17:00:00" dayStart="2" dayEnd="6" monthStart="0" monthEnd="11" week="2,4" message="南展望室">
+            <description lang="CHT" description="南展望室" />
+		</businessHours>
+		<closed timeStart="00:00:00" timeEnd="23:59:59" dayStart="2" dayEnd="2" monthStart="0" monthEnd="11" week="1,3" message="南展望室">
+            <description lang="CHT" description="南展望室" />
+		</closed>
+		<price price="0" ageFrom="1" ageTo="99" numberOfPerson="1" message="見学無料">
+            <description lang="CHT" description="見学無料" />
+		</price>
+	</sight>
+
+	<sight>
+        <data lang="CHT" name="平和祈念展示資料館" country="日本" address="東京都新宿区西新宿2-6-1" address2="新宿住友ビル48F" source="http://www.rurubu.com/sight/detail.aspx?BookID=JC002184"
+            place="" info="" tel="03-5323-8709" parking="FALSE" url="" latitude="-1.0" longitude="-1.0" area="東京" subarea="新宿区"/>
+        <type type="1" message="" />
+		<businessHours timeStart="09:30:00" timeEnd="17:30:00" dayStart="0" dayEnd="6" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="">
+            <description lang="CHT" description="" />
+		</businessHours>
+		<price price="0" ageFrom="1" ageTo="99" numberOfPerson="1" message="見学無料">
+            <description lang="CHT" description="見学無料" />
+		</price>
+	</sight>
+
+	<sight>
+        <data lang="CHT" name="出雲大社東京分祠" country="日本" address="東京都港区六本木7-18-5" address2="" source="http://www.rurubu.com/sight/detail.aspx?BookID=J0071297"
+            place="" info="" tel="03-3401-9301" parking="TRUE" url="" latitude="-1.0" longitude="-1.0" area="東京" subarea="港区"/>
+        <type type="3" message="" />
+		<businessHours timeStart="09:00:00" timeEnd="17:00:00" dayStart="0" dayEnd="6" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="">
+            <description lang="CHT" description="" />
+		</businessHours>
+	</sight>
+	
+	<sight>
+        <data lang="CHT" name="第37回納涼能" country="日本" address="東京都渋谷区松濤1-16-4" address2="" source="http://www.rurubu.com/event/detail.aspx?ID=P13914"
+            place="観世能楽堂" info="" tel="03-5925-3871" parking="FALSE" url="http://www.nohgaku.or.jp/" latitude="-1.0" longitude="-1.0" area="東京" subarea="渋谷"/>
+        <type type="2" message="" />
+		<price price="6000" ageFrom="1" ageTo="99" numberOfPerson="1" message="正面Ｓ席">
+            <description lang="CHT" description="正面S席" />
+		</price>
+		<price price="5000" ageFrom="1" ageTo="99" numberOfPerson="1" message="正面A席">
+            <description lang="CHT" description="正面A席" />
+		</price>
+		<price price="4500" ageFrom="1" ageTo="99" numberOfPerson="1" message="正面B席">
+            <description lang="CHT" description="正面B席" />
+		</price>
+		<price price="5000" ageFrom="1" ageTo="99" numberOfPerson="1" message="脇正面A席">
+            <description lang="CHT" description="脇正面A席" />
+		</price>
+		<price price="4000" ageFrom="1" ageTo="99" numberOfPerson="1" message="脇正面Ｂ席">
+            <description lang="CHT" description="脇正面B席" />
+		</price>
+		<price price="3000" ageFrom="1" ageTo="99" numberOfPerson="1" message="普及席">
+            <description lang="CHT" description="普及席" />
+		</price>
+		<specialEvent repeat="0" repeatType="0" timeStart="13:00:00" timeEnd="17:45:00" dateStart="2014-07-18" dateEnd="2014-07-18" message="">
+            <description lang="CHT" description="" />
+		</specialEvent>
+	</sight>
+
+	<sight>
+        <data lang="CHT" name="消防博物館" country="日本" address="東京都新宿区四谷3-10" address2="" source="http://www.rurubu.com/sight/detail.aspx?BookID=00001710"
+            place="" info="" tel="03-3353-9119" parking="FALSE" url="" latitude="-1.0" longitude="-1.0" area="東京" subarea="新宿"/>
+        <type type="1" message="" />
+		<businessHours timeStart="09:30:00" timeEnd="17:00:00" dayStart="0" dayEnd="0" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="">
+            <description lang="CHT" description="" />
+		</businessHours>
+		<businessHours timeStart="09:30:00" timeEnd="17:00:00" dayStart="2" dayEnd="6" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="">
+            <description lang="CHT" description="" />
+		</businessHours>
+		<closed timeStart="00:00:00" timeEnd="23:59:59" dayStart="1" dayEnd="1" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="館内整備日">
+            <description lang="CHT" description="館内整備日" />
+		</closed>
+		<price price="0" ageFrom="1" ageTo="99" numberOfPerson="1" message="">
+            <description lang="CHT" description="" />
+		</price>
+	</sight>
+
+    <sight>
+        <data lang="CHT" name="貴船神社" country="日本" address="京都府京都市左京区鞍馬貴船町180" address2="" source="http://www.rurubu.com/sight/detail.aspx?BookID=A3703210"
+            place="" info="" tel="075-741-2016" parking="TRUE" url="" latitude="-1.0" longitude="-1.0" area="京都府" subarea="左京区"/>
+        <type type="3" message="" />
+        <businessHours timeStart="09:00:00" timeEnd="16:30:00" dayStart="0" dayEnd="6" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="無休">
+            <description lang="CHT" description="無休" />
+        </businessHours>
+        <price price="0" ageFrom="1" ageTo="99" numberOfPerson="1" message="境内無料">
+            <description lang="CHT" description="境内無料" />
+        </price>
+    </sight>
+
+    <sight>
+        <data lang="CHT" name="台北101" country="臺灣" address="台北市信義區信義路五段7號" address2="" source="http://www.taipei-101.com.tw/"
+            place="" info="" tel="02-8101-8800" parking="TRUE" url="http://www.taipei-101.com.tw/" latitude="-1.0" longitude="-1.0" area="台北" subarea="信義區"/>
+        <businessHours timeStart="09:00:00" timeEnd="22:00:00" dayStart="0" dayEnd="6" monthStart="0" monthEnd="11" week="1,2,3,4,5,6" message="">
+            <description lang="CHT" description="" />
+        </businessHours>
+        <price price="500" ageFrom="1" ageTo="99" numberOfPerson="1" message="">
+            <description lang="CHT" description="" />
+        </price>
+    </sight>
+	
+</travel>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travel>
+
+	<city lang="EN" country= "Japan" area="Hokkaido" subarea="Hokkaido" prefecture="Hokkaido" />
+	<city lang="JP" country= "日本" area="北海道" subarea="北海道" prefecture="北海道" />
+	<city lang="CHT" country= "日本" area="北海道" subarea="北海道" prefecture="北海道" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Touhoku" prefecture="Akita" />
+	<city lang="JP" country= "日本" area="本州" subarea="東北" prefecture="秋田" />
+	<city lang="CHT" country= "日本" area="本州" subarea="東北" prefecture="秋田" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Touhoku" prefecture="Aomori" />
+	<city lang="JP" country= "日本" area="本州" subarea="東北" prefecture="青森" />
+	<city lang="CHT" country= "日本" area="本州" subarea="東北" prefecture="青森" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Touhoku" prefecture="Yamagata" />
+	<city lang="JP" country= "日本" area="本州" subarea="東北" prefecture="山形" />
+	<city lang="CHT" country= "日本" area="本州" subarea="東北" prefecture="山形" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Touhoku" prefecture="Miyagi" />
+	<city lang="JP" country= "日本" area="本州" subarea="東北" prefecture="宮城" />
+	<city lang="CHT" country= "日本" area="本州" subarea="東北" prefecture="宮城" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Touhoku" prefecture="Iwate" />
+	<city lang="JP" country= "日本" area="本州" subarea="東北" prefecture="岩手" />
+	<city lang="CHT" country= "日本" area="本州" subarea="東北" prefecture="岩手" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Touhoku" prefecture="Fukushima" />
+	<city lang="JP" country= "日本" area="本州" subarea="東北" prefecture="福島" />
+	<city lang="CHT" country= "日本" area="本州" subarea="東北" prefecture="福島" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kanntou" prefecture="Saitama" />
+	<city lang="JP" country= "日本" area="本州" subarea="関東" prefecture="埼玉" />
+	<city lang="CHT" country= "日本" area="本州" subarea="關東" prefecture="埼玉" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kanntou" prefecture="Tochigi" />
+	<city lang="JP" country= "日本" area="本州" subarea="関東" prefecture="栃木" />
+	<city lang="CHT" country= "日本" area="本州" subarea="關東" prefecture="栃木" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kanntou" prefecture="Tokyo" />
+	<city lang="JP" country= "日本" area="本州" subarea="関東" prefecture="東京" />
+	<city lang="CHT" country= "日本" area="本州" subarea="關東" prefecture="東京" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kanntou" prefecture="Kanagawa" />
+	<city lang="JP" country= "日本" area="本州" subarea="関東" prefecture="神奈川" />
+	<city lang="CHT" country= "日本" area="本州" subarea="關東" prefecture="神奈川" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kanntou" prefecture="Ibaraki" />
+	<city lang="JP" country= "日本" area="本州" subarea="関東" prefecture="茨城" />
+	<city lang="CHT" country= "日本" area="本州" subarea="關東" prefecture="茨城" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kanntou" prefecture="Chiba" />
+	<city lang="JP" country= "日本" area="本州" subarea="関東" prefecture="千葉" />
+	<city lang="CHT" country= "日本" area="本州" subarea="關東" prefecture="千葉" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kanntou" prefecture="Gunma" />
+	<city lang="JP" country= "日本" area="本州" subarea="関東" prefecture="群馬" />
+	<city lang="CHT" country= "日本" area="本州" subarea="關東" prefecture="群馬" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuubu" prefecture="Aichi" />
+	<city lang="JP" country= "日本" area="本州" subarea="中部" prefecture="愛知" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中部" prefecture="愛知" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuubu" prefecture="Fukui" />
+	<city lang="JP" country= "日本" area="本州" subarea="中部" prefecture="福井" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中部" prefecture="福井" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuubu" prefecture="Gifu" />
+	<city lang="JP" country= "日本" area="本州" subarea="中部" prefecture="岐阜" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中部" prefecture="岐阜" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuubu" prefecture="Ishikawa" />
+	<city lang="JP" country= "日本" area="本州" subarea="中部" prefecture="石川" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中部" prefecture="石川" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuubu" prefecture="Niigata" />
+	<city lang="JP" country= "日本" area="本州" subarea="中部" prefecture="新潟" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中部" prefecture="新潟" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuubu" prefecture="Shizuoka" />
+	<city lang="JP" country= "日本" area="本州" subarea="中部" prefecture="静岡" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中部" prefecture="靜岡" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuubu" prefecture="Nagano" />
+	<city lang="JP" country= "日本" area="本州" subarea="中部" prefecture="長野" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中部" prefecture="長野" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuubu" prefecture="Toyama" />
+	<city lang="JP" country= "日本" area="本州" subarea="中部" prefecture="富山" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中部" prefecture="富山" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuubu" prefecture="Yamanashi" />
+	<city lang="JP" country= "日本" area="本州" subarea="中部" prefecture="山梨" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中部" prefecture="山梨" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kinnki" prefecture="Hyōgo" />
+	<city lang="JP" country= "日本" area="本州" subarea="近畿" prefecture="兵庫" />
+	<city lang="CHT" country= "日本" area="本州" subarea="近畿" prefecture="兵庫" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kinnki" prefecture="Osaka" />
+	<city lang="JP" country= "日本" area="本州" subarea="近畿" prefecture="大阪" />
+	<city lang="CHT" country= "日本" area="本州" subarea="近畿" prefecture="大阪" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kinnki" prefecture="Shiga" />
+	<city lang="JP" country= "日本" area="本州" subarea="近畿" prefecture="滋賀" />
+	<city lang="CHT" country= "日本" area="本州" subarea="近畿" prefecture="滋賀" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kinnki" prefecture="Wakayama" />
+	<city lang="JP" country= "日本" area="本州" subarea="近畿" prefecture="和歌山" />
+	<city lang="CHT" country= "日本" area="本州" subarea="近畿" prefecture="和歌山" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kinnki" prefecture="Nara" />
+	<city lang="JP" country= "日本" area="本州" subarea="近畿" prefecture="奈良" />
+	<city lang="CHT" country= "日本" area="本州" subarea="近畿" prefecture="奈良" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kinnki" prefecture="Kyoto" />
+	<city lang="JP" country= "日本" area="本州" subarea="近畿" prefecture="京都" />
+	<city lang="CHT" country= "日本" area="本州" subarea="近畿" prefecture="京都" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Kinnki" prefecture="Mie" />
+	<city lang="JP" country= "日本" area="本州" subarea="近畿" prefecture="三重" />
+	<city lang="CHT" country= "日本" area="本州" subarea="近畿" prefecture="三重" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuugoku" prefecture="Okayama" />
+	<city lang="JP" country= "日本" area="本州" subarea="中国" prefecture="岡山" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中國" prefecture="岡山" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuugoku" prefecture="Shimane" />
+	<city lang="JP" country= "日本" area="本州" subarea="中国" prefecture="島根" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中國" prefecture="島根" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuugoku" prefecture="Tottori" />
+	<city lang="JP" country= "日本" area="本州" subarea="中国" prefecture="鳥取" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中國" prefecture="鳥取" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuugoku" prefecture="Yamaguchi" />
+	<city lang="JP" country= "日本" area="本州" subarea="中国" prefecture="山口" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中國" prefecture="山口" />
+
+	<city lang="EN" country= "Japan" area="Honnshuu" subarea="Chuugoku" prefecture="Hiroshima" />
+	<city lang="JP" country= "日本" area="本州" subarea="中国" prefecture="広島" />
+	<city lang="CHT" country= "日本" area="本州" subarea="中國" prefecture="廣島" />
+
+	<city lang="EN" country= "Japan" area="Shikoku" subarea="Shikoku" prefecture="Kagawa" />
+	<city lang="JP" country= "日本" area="四国" subarea="四国" prefecture="香川" />
+	<city lang="CHT" country= "日本" area="四國" subarea="四國" prefecture="香川" />
+
+	<city lang="EN" country= "Japan" area="Shikoku" subarea="Shikoku" prefecture="Ehime" />
+	<city lang="JP" country= "日本" area="四国" subarea="四国" prefecture="愛媛" />
+	<city lang="CHT" country= "日本" area="四國" subarea="四國" prefecture="愛媛" />
+
+	<city lang="EN" country= "Japan" area="Shikoku" subarea="Shikoku" prefecture="Kōchi" />
+	<city lang="JP" country= "日本" area="四国" subarea="四国" prefecture="高知" />
+	<city lang="CHT" country= "日本" area="四國" subarea="四國" prefecture="高知" />
+
+	<city lang="EN" country= "Japan" area="Shikoku" subarea="Shikoku" prefecture="Tokushima" />
+	<city lang="JP" country= "日本" area="四国" subarea="四国" prefecture="徳島" />
+	<city lang="CHT" country= "日本" area="四國" subarea="四國" prefecture="德島" />
+
+	<city lang="EN" country= "Japan" area="Kyushu" subarea="Kyushu" prefecture="Kagoshima" />
+	<city lang="JP" country= "日本" area="九州" subarea="九州" prefecture="鹿児島" />
+	<city lang="CHT" country= "日本" area="九州" subarea="九州" prefecture="鹿兒島" />
+
+	<city lang="EN" country= "Japan" area="Kyushu" subarea="Kyushu" prefecture="Kumamoto" />
+	<city lang="JP" country= "日本" area="九州" subarea="九州" prefecture="熊本" />
+	<city lang="CHT" country= "日本" area="九州" subarea="九州" prefecture="熊本" />
+
+	<city lang="EN" country= "Japan" area="Kyushu" subarea="Kyushu" prefecture="Miyazaki" />
+	<city lang="JP" country= "日本" area="九州" subarea="九州" prefecture="宮崎" />
+	<city lang="CHT" country= "日本" area="九州" subarea="九州" prefecture="宮崎" />
+
+	<city lang="EN" country= "Japan" area="Kyushu" subarea="Kyushu" prefecture="Nagasaki" />
+	<city lang="JP" country= "日本" area="九州" subarea="九州" prefecture="長崎" />
+	<city lang="CHT" country= "日本" area="九州" subarea="九州" prefecture="長崎" />
+
+	<city lang="EN" country= "Japan" area="Kyushu" subarea="Kyushu" prefecture="Ōita" />
+	<city lang="JP" country= "日本" area="九州" subarea="九州" prefecture="大分" />
+	<city lang="CHT" country= "日本" area="九州" subarea="九州" prefecture="大分" />
+
+	<city lang="EN" country= "Japan" area="Kyushu" subarea="Kyushu" prefecture="Saga" />
+	<city lang="JP" country= "日本" area="九州" subarea="九州" prefecture="佐賀" />
+	<city lang="CHT" country= "日本" area="九州" subarea="九州" prefecture="佐賀" />
+
+	<city lang="EN" country= "Japan" area="Kyushu" subarea="Kyushu" prefecture="Fukuoka" />
+	<city lang="JP" country= "日本" area="九州" subarea="九州" prefecture="福岡" />
+	<city lang="CHT" country= "日本" area="九州" subarea="九州" prefecture="福岡" />
+
+	<city lang="EN" country= "Japan" area="Okinawa" subarea="Okinawa" prefecture="Okinawa" />
+	<city lang="JP" country= "日本" area="沖縄" subarea="沖縄" prefecture="沖縄" />
+	<city lang="CHT" country= "日本" area="沖繩" subarea="沖繩" prefecture="沖繩" />
+
+</travel>

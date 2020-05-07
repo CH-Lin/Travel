@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<typeAliases>
+		<typeAlias alias="Country" type="com.travel.data.Country" />
+		<typeAlias alias="City" type="com.travel.data.City" />
+		<typeAlias alias="Spot" type="com.travel.data.Spot" />
+		<typeAlias alias="SpotDetail" type="com.travel.data.SpotDetail" />
+		<typeAlias alias="Price" type="com.travel.data.Price" />
+		<typeAlias alias="PriceSpecial" type="com.travel.data.PriceSpecial" />
+		<typeAlias alias="TimeOpenClose" type="com.travel.data.TimeOpenClose" />
+		<typeAlias alias="SpecialEvent" type="com.travel.data.SpecialEvent" />
+		<typeAlias alias="SpecialClosed" type="com.travel.data.SpecialClosed" />
+		<typeAlias alias="SpotTimeTable" type="com.travel.data.SpotTimeTable" />
+		<typeAlias alias="Comment" type="com.travel.data.Comment" />
+		<typeAlias alias="SpotType" type="com.travel.data.SpotType" />
+		<typeAlias alias="Pass" type="com.travel.data.Pass" />
+		<typeAlias alias="Next" type="com.travel.data.Next" />
+		<typeAlias alias="Picture" type="com.travel.data.Picture" />
+		<typeAlias alias="GeoData" type="com.travel.data.GeoData" />
+		<typeAlias alias="Access" type="com.travel.data.Access" />
+		<typeAlias alias="AccessInfo" type="com.travel.data.AccessInfo" />
+		<typeAlias alias="Counter" type="com.travel.data.Counter" />
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="org.postgresql.Driver" />
+				<property name="url" value="jdbc:postgresql://localhost:5432/travel" />
+				<property name="username" value="postgres" />
+				<property name="password" value="elric7467" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="com/travel/db/SpotMapper.xml" />
+		<mapper resource="com/travel/db/Table.xml" />
+	</mappers>
+
+</configuration>

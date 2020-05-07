@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travel>
+
+	<language code="EN" name="English" />
+	<language code="JP" name="日文" />
+	<language code="CHT" name="繁體中文" />
+
+</travel>

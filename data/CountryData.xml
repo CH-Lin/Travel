@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travel>
+
+	<country lang="EN" country="Japan" />
+	<country lang="JP" country="日本" />
+	<country lang="CHT" country="日本" />
+
+	<country lang="EN" country="Tanwan" />
+	<country lang="JP" country="台湾" />
+	<country lang="CHT" country="臺灣" />
+
+</travel>

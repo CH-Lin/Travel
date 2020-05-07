@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SpotMapper">
+	<select id="createSpotTables_ps">
+		CREATE TABLE IF NOT EXISTS spot (SPOTID bigserial PRIMARY KEY, NAME character varying(255) NOT NULL, COUNTRY character varying(255), ADDRESS text, TYPE character varying(255), CHECKED bool DEFAULT FALSE, SOURCE text, CONSTRAINT NAME_SOURCE UNIQUE(NAME, SOURCE));
+		CREATE TABLE IF NOT EXISTS spotDetail (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, ADDRESS2 text, PLACE text, INFO text, TEL character varying(255), PARKING bool, URL text, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS spotType (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, TYPE int, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS businessHours (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, TIMESTART time, TIMEEND time, DAYSTART int, DAYEND int, MONTHSTART int, MONTHEND int, WEEK character varying(20), MESSAGE text, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS closed (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, TIMESTART time, TIMEEND time, DAYSTART int, DAYEND int, MONTHSTART int, MONTHEND int, WEEK character varying(20), MESSAGE text, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS specialEvent (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, REPEAT int, REPEATTYPE int, TIMESTART time, TIMEEND time, DATESTART date, DATEEND date, MESSAGE text, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS specialClosed (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, REPEAT int, REPEATTYPE int, TIMESTART time, TIMEEND time, DATESTART date, DATEEND date, MESSAGE text, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS spotTimeTable (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, YEARMONTH date NOT NULL, DATA text NOT NULL, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS picture (ID bigserial PRIMARY KEY, USERID bigint NOT NULL, SPOTID bigint NOT NULL, FILENAME text, SIZEX int, SIZEY int, MESSAGE text, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS price (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, PRICE int, AGEFROM int, AGETO int, NUMBEROFPERSON int, SPCOND character varying(255), MESSAGE text, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS priceSpecial (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, PRICE int, AGEFROM int, AGETO int, NUMBEROFPERSON int, TIMESTART time, TIMEEND time, DATESTART date, DATEEND date, SPCOND character varying(255), MESSAGE text, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS comment (ID bigserial PRIMARY KEY, USERID bigint NOT NULL, SPOTID bigint NOT NULL, RANKING int, POSTTIME TIMESTAMP, TIMENECESSARY time, MESSAGE text, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS next (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, USERID bigint NOT NULL, PREFEREDNEXT bigint NOT NULL DEFAULT 0, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS pass (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, PASSNAME character varying(255), FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS country (ID bigserial PRIMARY KEY, LANGUAGE character varying(20) not null, COUNTRY character varying(20) not null, CONSTRAINT LANGUAGE_COUNTRY UNIQUE(LANGUAGE, COUNTRY));
+		CREATE TABLE IF NOT EXISTS city (ID bigserial PRIMARY KEY, LANGUAGE character varying(20) not null, COUNTRY character varying(20) not null, AREA character varying(20), SUBAREA character varying(20), PREFECTURE character varying(20), CONSTRAINT COUNTRY_LANGUAGE_PREFECTURE UNIQUE(COUNTRY, LANGUAGE, PREFECTURE));
+		CREATE TABLE IF NOT EXISTS geoData (ADDRESS text PRIMARY KEY, LATITUDE double precision NOT NULL, LONGITUDE double precision NOT NULL, RESULT text);
+		CREATE TABLE IF NOT EXISTS access (ID bigserial PRIMARY KEY, FROMID bigint NOT NULL, TOID bigint NOT NULL, TRANSPORTTYPE int NOT NULL, DURATION int, DISTANCE int, RESULT text);
+		CREATE TABLE IF NOT EXISTS accessInfo (ID bigserial PRIMARY KEY, SPOTID bigint NOT NULL, FROMID bigint, TRANSPORTTYPE int, TIMEDEPARTURE time, TIMENECESSARY time, INFORMATION text, FOREIGN KEY (SPOTID) REFERENCES spot (SPOTID));
+		CREATE TABLE IF NOT EXISTS counter (ID text PRIMARY KEY, GPSOFFSET bigint, GPSCOUNT bigint, GPSTIME bigint, ACCESSDAYCOUNT int, ACCESSDAYTIME bigint, ACCESSSECCOUNT int, ACCESSSECTIME bigint);
+		CREATE INDEX spot_id_index ON spot (SPOTID);
+		CREATE INDEX spot_source_index ON spot (SOURCE);
+		CREATE INDEX spotDetail_id_index ON spotDetail (ID);
+		CREATE INDEX spotDetail_spotid_index ON spotDetail (SPOTID);
+		CREATE INDEX spotType_id_index ON spotType (ID);
+		CREATE INDEX spotType_spotid_index ON spotType (SPOTID);
+		CREATE INDEX businessHours_id_index ON businessHours (ID);
+		CREATE INDEX businessHours_spotid_index ON businessHours (SPOTID);
+		CREATE INDEX closed_id_index ON closed (ID);
+		CREATE INDEX closed_spotid_index ON closed (SPOTID);
+		CREATE INDEX specialEvent_id_index ON specialEvent (ID);
+		CREATE INDEX specialEvent_spotid_index ON specialEvent (SPOTID);
+		CREATE INDEX specialClosed_id_index ON specialClosed (ID);
+		CREATE INDEX specialClosed_spotid_index ON specialClosed (SPOTID);
+		CREATE INDEX spotTimeTable_id_index ON spotTimeTable (ID);
+		CREATE INDEX spotTimeTable_spotid_index ON spotTimeTable (SPOTID);
+		CREATE INDEX picture_id_index ON picture (ID);
+		CREATE INDEX picture_spotid_index ON picture (SPOTID);
+		CREATE INDEX price_id_index ON price (ID);
+		CREATE INDEX price_spotid_index ON price (SPOTID);
+		CREATE INDEX priceSpecial_id_index ON priceSpecial (ID);
+		CREATE INDEX priceSpecial_spotid_index ON priceSpecial (SPOTID);
+		CREATE INDEX comment_id_index ON comment (ID);
+		CREATE INDEX comment_spotid_index ON comment (SPOTID);
+		CREATE INDEX next_id_index ON next (ID);
+		CREATE INDEX next_spotid_index ON next (SPOTID);
+		CREATE INDEX pass_id_index ON pass (ID);
+		CREATE INDEX pass_spotid_index ON pass (SPOTID);
+		CREATE INDEX geoData_address_index ON geoData (ADDRESS);
+		CREATE INDEX accessInfo_id_index ON accessInfo (ID);
+		CREATE INDEX accessInfo_spotid_index ON accessInfo (SPOTID);
+		CREATE INDEX access_id_index ON access (ID);
+	</select>
+
+	<select id="createSpotTables_mysql">
+		
+	</select>
+
+	<select id="dropSpotTables">
+		DROP INDEX IF EXISTS spot_id_index;
+		DROP INDEX IF EXISTS spot_source_index;
+		DROP INDEX IF EXISTS spotDetail_id_index;
+		DROP INDEX IF EXISTS spotDetail_spotid_index;
+		DROP INDEX IF EXISTS spotType_id_index;
+		DROP INDEX IF EXISTS spotType_spotid_index;
+		DROP INDEX IF EXISTS businessHours_id_index;
+		DROP INDEX IF EXISTS businessHours_spotid_index;
+		DROP INDEX IF EXISTS closed_id_index;
+		DROP INDEX IF EXISTS closed_spotid_index;
+		DROP INDEX IF EXISTS specialEvent_id_index;
+		DROP INDEX IF EXISTS specialEvent_spotid_index;
+		DROP INDEX IF EXISTS specialClosed_id_index;
+		DROP INDEX IF EXISTS specialClosed_spotid_index;
+		DROP INDEX IF EXISTS spotTimeTable_id_index;
+		DROP INDEX IF EXISTS spotTimeTable_spotid_index;
+		DROP INDEX IF EXISTS picture_id_index;
+		DROP INDEX IF EXISTS picture_spotid_index;
+		DROP INDEX IF EXISTS price_id_index;
+		DROP INDEX IF EXISTS price_spotid_index;
+		DROP INDEX IF EXISTS priceSpecial_id_index;
+		DROP INDEX IF EXISTS priceSpecial_spotid_index;
+		DROP INDEX IF EXISTS comment_id_index;
+		DROP INDEX IF EXISTS comment_spotid_index;
+		DROP INDEX IF EXISTS next_id_index;
+		DROP INDEX IF EXISTS next_spotid_index;
+		DROP INDEX IF EXISTS pass_id_index;
+		DROP INDEX IF EXISTS pass_spotid_index;
+		DROP INDEX IF EXISTS geoData_address_index;
+		DROP INDEX IF EXISTS accessInfo_id_index;
+		DROP INDEX IF EXISTS accessInfo_spotid_index;
+		DROP INDEX IF EXISTS access_id_index;
+		DROP TABLE IF EXISTS counter;
+		DROP TABLE IF EXISTS accessInfo;
+		DROP TABLE IF EXISTS access;
+		DROP TABLE IF EXISTS geoData;
+		DROP TABLE IF EXISTS city;
+		DROP TABLE IF EXISTS country;
+		DROP TABLE IF EXISTS pass;
+		DROP TABLE IF EXISTS next;
+		DROP TABLE IF EXISTS comment;
+		DROP TABLE IF EXISTS priceSpecial;
+		DROP TABLE IF EXISTS price;
+		DROP TABLE IF EXISTS picture;
+		DROP TABLE IF EXISTS spotTimeTable;
+		DROP TABLE IF EXISTS specialClosed;
+		DROP TABLE IF EXISTS specialEvent;
+		DROP TABLE IF EXISTS closed;
+		DROP TABLE IF EXISTS businessHours;
+		DROP TABLE IF EXISTS spotType;
+		DROP TABLE IF EXISTS spotDetail;
+		DROP TABLE IF EXISTS spot;
+	</select>
+</mapper>

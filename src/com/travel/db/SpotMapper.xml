@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SpotMapper">
+	<select id="spAction">
+
+	</select>
+
+	<select id="listTables" resultType="string">
+		SELECT table_name FROM information_schema.tables WHERE table_schema='public' AND table_type='BASE TABLE';
+	</select>
+
+	<insert id="insertToCounter" parameterType="Counter">
+		INSERT INTO counter (ID, GPSOFFSET, GPSCOUNT, GPSTIME, ACCESSDAYCOUNT, ACCESSDAYTIME, ACCESSSECCOUNT, ACCESSSECTIME)
+		VALUES (#{id}, #{gpsOffset}, #{gpsCount}, #{gpsTime}, #{accessDayCount}, #{accessDayTime}, #{accessSecCount}, #{accessSecTime});
+	</insert>
+
+	<select id="getCounterByKey" parameterType="string" resultType="Counter">
+		SELECT * FROM counter WHERE ID = #{key}
+	</select>
+
+	<update id="updateCounterByKey" parameterType="Counter">
+		UPDATE counter SET GPSOFFSET = #{gpsOffset}, GPSCOUNT = #{gpsCount}, GPSTIME = #{gpsTime}, ACCESSDAYCOUNT = #{accessDayCount}, ACCESSDAYTIME = #{accessDayTime}, ACCESSSECCOUNT = #{accessSecCount}, ACCESSSECTIME = #{accessSecTime}  WHERE ID = #{id}
+	</update>
+
+	<insert id="insertToCountry" parameterType="Country">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('country_id_seq')
+        </selectKey>
+		INSERT INTO country (ID, LANGUAGE, COUNTRY)
+		VALUES (#{id}, #{language}, #{country});
+	</insert>
+
+	<select id="getAllCountry" resultType="Country">
+		SELECT * FROM country
+	</select>
+
+	<insert id="insertToCity" parameterType="City">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('city_id_seq')
+        </selectKey>
+		INSERT INTO city (ID, LANGUAGE, COUNTRY, AREA, SUBAREA, PREFECTURE)
+		VALUES (#{id}, #{language}, #{country}, #{area}, #{subarea}, #{prefecture});
+	</insert>
+
+	<select id="getAllCity" resultType="City">
+		SELECT * FROM city
+	</select>
+
+	<insert id="insertToSopt" parameterType="Spot" useGeneratedKeys="true">
+		<selectKey keyProperty="spotId" resultType="long" order="BEFORE">
+            SELECT nextVal('spot_spotid_seq')
+        </selectKey>
+		INSERT INTO spot (SPOTID, NAME, COUNTRY, ADDRESS, TYPE, CHECKED, SOURCE)
+		VALUES (#{spotId}, #{name}, #{country}, #{address}, #{type}, #{checked}, #{source});
+	</insert>
+
+	<select id="getSpotCount" resultType="long">
+		SELECT COUNT(*) ID FROM spot
+	</select>
+
+	<select id="getAllSpot" resultType="Spot">
+		SELECT * FROM spot
+	</select>
+
+	<select id="getSpot" parameterType="map" resultType="Spot">
+		SELECT * FROM spot LIMIT #{count} OFFSET #{offset}
+	</select>
+
+	<select id="getBySpotId" parameterType="long" resultType="Spot">
+		SELECT * FROM spot WHERE SPOTID = #{spotId}
+	</select>
+
+	<delete id="deleteBySpotId" parameterType="long">
+		DELETE from spot WHERE SPOTID = #{spotId};
+	</delete>
+
+	<insert id="insertToSoptDetail" parameterType="SpotDetail" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('spotdetail_id_seq')
+        </selectKey>
+		INSERT INTO spotDetail (ID, SPOTID, INFO, ADDRESS2, PLACE, TEL, PARKING, URL)
+		VALUES (#{id}, #{spotId}, #{info}, #{address2}, #{place}, #{tel}, #{parking}, #{url});
+	</insert>
+
+	<select id="getAllSpotDetail" resultType="SpotDetail">
+		SELECT * FROM spotDetail
+	</select>
+
+	<insert id="insertToPicture" parameterType="Picture" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('picture_id_seq')
+        </selectKey>
+		INSERT INTO picture (ID, USERID, SPOTID, FILENAME, SIZEX, SIZEY, MESSAGE)
+		VALUES (#{id}, #{userId}, #{spotId}, #{fileName}, #{sizeX}, #{sizeY}, #{message});
+	</insert>
+
+	<select id="getAllPicture" resultType="Picture">
+		SELECT * FROM picture
+	</select>
+
+	<insert id="insertToPrice" parameterType="Price" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('price_id_seq')
+        </selectKey>
+		INSERT INTO price (ID, SPOTID, PRICE, AGEFROM, AGETO, NUMBEROFPERSON, SPCOND, MESSAGE)
+		VALUES (#{id}, #{spotId}, #{price}, #{ageFrom}, #{ageTo}, #{numberOfPerson}, #{spCond}, #{message});
+	</insert>
+
+	<select id="getAllPrice" resultType="Price">
+		SELECT * FROM price
+	</select>
+
+	<insert id="insertToPriceSpecial" parameterType="PriceSpecial" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('pricespecial_id_seq')
+        </selectKey>
+		INSERT INTO priceSpecial (ID, SPOTID, PRICE, AGEFROM, AGETO, NUMBEROFPERSON, TIMESTART, TIMEEND, DATESTART, DATEEND, SPCOND, MESSAGE)
+		VALUES (#{id}, #{spotId}, #{price}, #{ageFrom}, #{ageTo}, #{numberOfPerson}, #{timeStart}, #{timeEnd}, #{dateStart}, #{dateEnd}, #{spCond}, #{message});
+	</insert>
+
+	<select id="getAllPriceSpecial" resultType="PriceSpecial">
+		SELECT * FROM priceSpecial
+	</select>
+
+	<insert id="insertToBusinessHours" parameterType="TimeOpenClose" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('businesshours_id_seq')
+        </selectKey>
+		INSERT INTO businessHours (ID, SPOTID, TIMESTART, TIMEEND, DAYSTART, DAYEND, MONTHSTART, MONTHEND, WEEK, MESSAGE)
+		VALUES (#{id}, #{spotId}, #{timeStart}, #{timeEnd}, #{dayStart}, #{dayEnd}, #{monthStart}, #{monthEnd}, #{week}, #{message});
+	</insert>
+
+	<select id="getAllBusinessHours" resultType="TimeOpenClose">
+		SELECT * FROM businessHours
+	</select>
+
+	<insert id="insertToClosed" parameterType="TimeOpenClose" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('closed_id_seq')
+        </selectKey>
+		INSERT INTO closed (ID, SPOTID, TIMESTART, TIMEEND, DAYSTART, DAYEND, MONTHSTART, MONTHEND, WEEK, MESSAGE)
+		VALUES (#{id}, #{spotId}, #{timeStart}, #{timeEnd}, #{dayStart}, #{dayEnd}, #{monthStart}, #{monthEnd}, #{week}, #{message});
+	</insert>
+
+	<select id="getAllClosed" resultType="TimeOpenClose">
+		SELECT * FROM closed
+	</select>
+
+	<insert id="insertToSpecialEvent" parameterType="SpecialEvent" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('specialevent_id_seq')
+        </selectKey>
+		INSERT INTO specialEvent (ID, SPOTID, REPEAT, REPEATTYPE, TIMESTART, TIMEEND, DATESTART, DATEEND, MESSAGE)
+		VALUES (#{id}, #{spotId}, #{repeat}, #{repeatType}, #{timeStart}, #{timeEnd}, #{dateStart}, #{dateEnd}, #{message});
+	</insert>
+
+	<select id="getAllSpecialEvent" resultType="SpecialEvent">
+		SELECT * FROM specialEvent
+	</select>
+
+	<insert id="insertToSpecialClosed" parameterType="SpecialClosed" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('specialclosed_id_seq')
+        </selectKey>
+		INSERT INTO specialClosed (ID, SPOTID, REPEAT, REPEATTYPE, TIMESTART, TIMEEND, DATESTART, DATEEND, MESSAGE)
+		VALUES (#{id}, #{spotId}, #{repeat}, #{repeatType}, #{timeStart}, #{timeEnd}, #{dateStart}, #{dateEnd}, #{message});
+	</insert>
+
+	<select id="getAllSpecialClosed" resultType="SpecialClosed">
+		SELECT * FROM specialClosed
+	</select>
+
+	<insert id="insertToSpotTimeTable" parameterType="SpotTimeTable" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('spottimetable_id_seq')
+        </selectKey>
+		INSERT INTO spotTimeTable (ID, SPOTID, YEARMONTH, DATA)
+		VALUES (#{id}, #{spotId}, #{yearMonth}, #{data});
+	</insert>
+
+	<select id="getAllSpotTimeTable" resultType="SpotTimeTable">
+		SELECT * FROM spotTimeTable ORDER BY YEARMONTH, spotId
+	</select>
+
+	<insert id="insertToAccess" parameterType="Access" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('access_id_seq')
+        </selectKey>
+		INSERT INTO access (ID, FROMID, TOID, TRANSPORTTYPE, DURATION, DISTANCE, RESULT)
+		VALUES (#{id}, #{fromId}, #{toId}, #{transportType}, #{duration}, #{distance}, #{result});
+	</insert>
+
+	<select id="getAllAccess" resultType="Access">
+		SELECT * FROM access
+	</select>
+
+    <select id="getAccess" parameterType="map" resultType="Access">
+        SELECT * FROM access WHERE FROMID = #{from} AND TOID = #{to}
+    </select>
+
+	<insert id="insertToAccessInfo" parameterType="AccessInfo" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('accessinfo_id_seq')
+        </selectKey>
+		INSERT INTO accessInfo (ID, SPOTID, FROMID, TRANSPORTTYPE, TIMEDEPARTURE, TIMENECESSARY, INFORMATION)
+		VALUES (#{id}, #{spotId}, #{fromId}, #{transportType}, #{timeDeparture}, #{timeNecessary}, #{information});
+	</insert>
+
+	<select id="getAllAccessInfo" resultType="AccessInfo">
+		SELECT * FROM accessInfo
+	</select>
+
+	<insert id="insertToComment" parameterType="Comment" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('comment_id_seq')
+        </selectKey>
+		INSERT INTO comment (ID, USERID, SPOTID, RANKING, POSTTIME, TIMENECESSARY, MESSAGE)
+		VALUES (#{id}, #{userId}, #{spotId}, #{ranking}, #{postTime}, #{timeNecessary}, #{message});
+	</insert>
+
+	<select id="getAllComment" resultType="Comment">
+		SELECT * FROM comment
+	</select>
+
+	<insert id="insertToSpotType" parameterType="SpotType" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('spottype_id_seq')
+        </selectKey>
+		INSERT INTO spotType (ID, SPOTID, TYPE)
+		VALUES (#{id}, #{spotId}, #{type});
+	</insert>
+
+	<select id="getAllSpotType" resultType="SpotType">
+		SELECT * FROM spotType
+	</select>
+
+	<insert id="insertToNext" parameterType="Next" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('next_id_seq')
+        </selectKey>
+		INSERT INTO next (ID, SPOTID, USERID, PREFEREDNEXT)
+		VALUES (#{id}, #{spotId}, #{userId}, #{next});
+	</insert>
+
+	<select id="getAllNext" resultType="Next">
+		SELECT * FROM next
+	</select>
+
+	<insert id="insertToPass" parameterType="Pass" useGeneratedKeys="true">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT nextVal('pass_id_seq')
+        </selectKey>
+		INSERT INTO pass (ID, SPOTID, PASSNAME)
+		VALUES (#{id}, #{spotId}, #{name});
+	</insert>
+
+	<select id="getAllPass" resultType="Pass">
+		SELECT * FROM pass
+	</select>
+
+	<insert id="insertToGeoData" parameterType="GeoData" useGeneratedKeys="true">
+		INSERT INTO geoData (ADDRESS, LATITUDE, LONGITUDE, RESULT)
+		VALUES (#{address}, #{latitude}, #{longitude}, #{result});
+	</insert>
+
+	<select id="getGeoDataByKey" parameterType="string" resultType="GeoData">
+		SELECT * FROM geoData WHERE address = #{key}
+	</select>
+
+	<update id="updateGeoData" parameterType="GeoData">
+		UPDATE geoData SET LATITUDE = #{latitude}, LONGITUDE = #{longitude}, RESULT = #{result} WHERE ADDRESS = #{address}
+	</update>
+
+	<select id="getAllGeoData" resultType="GeoData">
+		SELECT * FROM geoData
+	</select>
+</mapper>

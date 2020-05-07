@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setting crawldelay="1500" lang="cht,jp,en" MaxPages="9999999"
+	thread="5" serverModePort="16842">
+	<agent
+		str="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
+		selected="true" />
+	<agent str="Googlebot/2.1 (+http://www.google.com/bot.html)"
+		selected="false" />
+	<tempfolder>
+		<win>C:\Users\Edward\AppData\Local\Temp\</win>
+		<mac>/Users/Edward/Desktop/crawler/</mac>
+	</tempfolder>
+	<filters path="">
+		<filter name="JP" path="com.travel.filter.DataJPFilter">
+			<data>config/JP.txt</data>
+		</filter>
+		<filter name="TYPE" path="com.travel.filter.DataTypeFilter">
+			<data>config/JP.txt</data>
+		</filter>
+	</filters>
+	<visitors path="">
+		<visitor url="http://www.rurubu.com/" path="config.plugin.crawler.RurubuCrawler"
+			selected="true">
+			<filter>JP</filter>
+			<filte>TYPE</filte>
+			<seed>http://www.rurubu.com/event/list.aspx?SubAreaCD=1303</seed>
+			<seed>http://www.rurubu.com/sight/list.aspx?AreaCD=02</seed>
+			<seed>http://www.rurubu.com/</seed>
+			<seed>http://www.rurubu.com/domestic/</seed>
+			<seed>http://www.rurubu.com/onsen/</seed>
+		</visitor>
+		<visitor url="http://www.e-japannavi.com/" path="config.plugin.crawler.EJapanNaviCrawler"
+			selected="false">
+			<filter>JP</filter>
+			<filte>TYPE</filte>
+			<seed>http://www.e-japannavi.com/</seed>
+			<seed>http://www.e-japannavi.com/syuyu/tokyo/index.shtml</seed>
+			<seed>http://www.e-japannavi.com/syuyu/osaka/index.shtml</seed>
+			<seed>http://www.e-japannavi.com/syuyu/hokkaido/index.shtml</seed>
+			<seed>http://www.e-japannavi.com/syuyu/index.shtml</seed>
+			<seed>http://www.e-japannavi.com/syuyu/kyoto/index.shtml</seed>
+		</visitor>
+		<visitor url="http://www.att-japan.net/tc" path="config.plugin.crawler.AttJapanCrawler"
+			selected="flase">
+			<filter>JP</filter>
+			<filte>TYPE</filte>
+			<seed>http://www.att-japan.net/tc</seed>
+			<seed>http://www.att-japan.net/tc/destination/tokyo</seed>
+			<seed>http://www.att-japan.net/tc/destination/hokkaido</seed>
+		</visitor>
+		<visitor url="http://www.tokyo-odaiba.net/" path="config.plugin.crawler.OdaibaCrawler"
+			selected="false">
+			<filter>JP</filter>
+			<seed>http://www.tokyo-odaiba.net/genre/name/</seed>
+		</visitor>
+	</visitors>
+</setting>

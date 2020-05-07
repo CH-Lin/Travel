@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travel>
+
+	<comment userID="1" spotID="1" ranking="10" postTime="2014-06-11 10:27:16" timeNecessart="1:00:00">
+		From user 1 about spot 1
+	</comment>
+	
+	<comment userID="2" spotID="1" ranking="8" postTime="2014-06-14 15:45:12" timeNecessart="1:10:00">
+		From user 2 about spot 1
+	</comment>
+	
+	<comment userID="1" spotID="2" ranking="7" postTime="2014-06-16 08:39:41" timeNecessart="00:45:00">
+		From user 1 about spot 2
+	</comment>
+	
+</travel>
